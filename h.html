@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        samle javascript on click
+    </title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Number 1:</td>
+            <td><input type="number" id="num1"></td></td>
+        </tr>
+        <tr>
+            <td>Number 2:</td>
+            <td><input type="number" id="num2"></td></td>
+        </tr>
+        <tr>
+            <td>Addition is:</td>
+            <td><label id="addition"></label></td>
+        </tr>
+        <tr>
+            <td><button id="addb">Click here to add</button></td>
+            
+        </tr>
+    </table>
+    <script>
+        document.getElementById("addb").addEventListener("click", function () {
+            let a=document.getElementById("num1").value;
+            let b=document.getElementById("num2").value;
+            addition(a,b);
+        });
+        function addition(a,b) {
+           let c=0;
+           c=Number(a)+Number(b);
+           document.getElementById("addition").innerHTML=c;
+     </script>
+       }
+</body>
+</html>

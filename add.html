@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym Workout Routine</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 25px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    table, th, td {
+        border: 4px solid #080808;
+    }
+    th, td {
+        padding: 15px;
+        text-align: left;
+    }
+    th {
+        background-color: #c0b5b5;
+    }
+    .addButton {
+        background-color: #4CAF50;
+        border: none;
+        color: rgb(241, 234, 234);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <h2>Gym Workout Routine</h2>
+    <button class="addButton" onclick="addExercise()">Add Exercise</button>
+    <table id="workoutTable">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Exercise</th>
+                <th>Sets</th>
+                <th>Reps</th>
+                <th>Weight</th>
+            </tr>
+        </thead>
+        <tbody id="exerciseList">
+            <!-- Exercises will be added here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Function to add a new exercise row
+        function addExercise() {
+
+
+            var exerciseList = document.getElementById('exerciseList');
+            var newRow = exerciseList.insertRow();
+            
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            var cell4 = newRow.insertCell(3);
+            var cell=5  newRow.insertCell(4);
+            
+
+            
+
+            cell1.innerHTML = '<input type="text" placeholder="DAY">';
+            cell2.innerHTML = '<input type="number" placeholder="Exercise Name">';
+            cell3.innerHTML = '<input type="number" placeholder="Sets">';
+            cell4.innerHTML = '<input type="text" placeholder="Reps">';
+            cell5.innerHTML = '<input type="text" placeholder="Weight">';
+        }
+    </script>
+</body>
+</html>
